@@ -12,5 +12,6 @@ func init() {
 }
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s!\n", r.Body)
+	body,_ :=ioutil.ReadAll(r.Body)
+	fmt.Fprintf(w, "Hello, %s!\n", string(body))
 }
