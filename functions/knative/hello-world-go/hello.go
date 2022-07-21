@@ -3,7 +3,7 @@ package hello
 import (
 	"fmt"
 	"net/http"
-
+	"io/ioutil"
 	"github.com/OpenFunction/functions-framework-go/functions"
 )
 
