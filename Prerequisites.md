@@ -99,3 +99,4 @@ kubectl create secret docker-registry push-secret \
  --docker-username=$REGISTRY_USER \
  --docker-password=$REGISTRY_PASSWORD
 ```
+test
