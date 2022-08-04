@@ -13,6 +13,7 @@ spec:
     env:
       FUNC_NAME: "HelloWorld"
       FUNC_CLEAR_SOURCE: "true"
+      FUNC_GOPROXY: "https://proxy.golang.com.cn,direct"
     srcRepo:
       url: "https://github.com/OpenFunction/samples.git"
       sourceSubPath: "functions/knative/hello-world-go"
