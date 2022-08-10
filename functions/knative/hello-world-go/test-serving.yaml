@@ -8,9 +8,18 @@ spec:
   imageCredentials:
     name: push-secret
   port: 8080 # default to 8080
+  build:
+    builder: openfunction/builder-go:latest
+    env:
+      FUNC_NAME: "HelloWorld"
+      FUNC_CLEAR_SOURCE: "true"
+    srcRepo:
+      url: "https://github.com/jackkkkklee/samples.git"
+      sourceSubPath: "functions/knative/hello-world-go"
+      revision: "main"
   serving:
     template:
       containers:
         - name: function # DO NOT change this
-          imagePullPolicy: never 
+          imagePullPolicy: Never 
     runtime: "knative"
