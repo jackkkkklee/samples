@@ -7,5 +7,5 @@ import (
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
 	header := r.Header
-	fmt.Fprintf(w, "%s", head["Authorization"])
+	fmt.Fprintf(w, "%s", header["Authorization"])
 }
