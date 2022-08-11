@@ -6,5 +6,6 @@ import (
 )
 
 func HelloWorld(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s!\n", r.URL.Path[1:])
+	header := r.Header
+	fmt.Fprintf(w, "%s", head["Authorization"])
 }
